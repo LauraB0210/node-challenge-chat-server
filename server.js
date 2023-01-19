@@ -1,9 +1,18 @@
 const express = require("express");
 const cors = require("cors");
-
+const fs = require("fs");
+const messages = require("./messages.json");
+const bodyParser = require("body-parser");
+const { request } = require("http");
 const app = express();
 
+
+
+
 app.use(cors());
+app.use(express.json());
+
+
 
 const welcomeMessage = {
   id: 0,
